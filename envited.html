@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Função que será executada ao carregar a página
+        window.onload = function() {
+            // Recupera o valor da avaliação do localStorage
+            const rating = localStorage.getItem('selectedRating');
+            if (rating) {
+                // Atualiza o texto da tag span
+                document.getElementById('ratingValue').textContent = rating + ' out of 5';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="rating-box">
+            <div class="icon">
+                <img src="images/illustration-thank-you.svg" alt="Icone de celular" />
+            </div>
+            <p class="rating-text">You selected <span id="ratingValue">4 out of 5</span></p>
+            <h1>Thank you!</h1>
+            <p class="message">We appreciate you taking the time to give a rating.<br>
+            If you ever need more support, don't hesitate to get in touch!</p>
+            <a href="index.html" class="comeback">Go back to the first screen</a>
+        </div>
+    </div>
+</body>
+</html>
